@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="237.0" prefWidth="480.0" styleClass="white-background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.dojo.akunku.controllers.AccountEditController">
+    <children>
+        <GridPane layoutX="50.0" layoutY="56.0" prefHeight="222.0" prefWidth="366.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="204.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="396.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="38.87091064453125" minHeight="10.0" prefHeight="37.935455322265625" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="37.93544006347656" minHeight="10.0" prefHeight="36.064544677734375" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Username" />
+                <Label layoutX="10.0" layoutY="22.0" text="Password" GridPane.rowIndex="1" />
+                <Label layoutX="10.0" layoutY="63.0" text="Sign Url" GridPane.rowIndex="2" />
+                <TextField fx:id="usernameField" styleClass="text-form-field" GridPane.columnIndex="1" />
+                <TextField fx:id="passwordField" layoutX="188.0" layoutY="18.0" styleClass="text-form-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="signUrlField" layoutX="10.0" layoutY="18.0" styleClass="text-form-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <buttons>
+                      <Button mnemonicParsing="false" onAction="#handleOk" text="Oke">
+                     <styleClass>
+                        <String fx:value="curve-background" />
+                        <String fx:value="red-background" />
+                        <String fx:value="white-text" />
+                     </styleClass>
+                  </Button>
+                      <Button mnemonicParsing="false" onAction="#handleCancel" style="-fx-background-color: fffafa; -fx-background-radius: 10; -fx-border-color: #ff504f; -fx-border-radius: 10;" text="Cancel" />
+                  </buttons>
+              </ButtonBar>
+            </children>
+        </GridPane>
+      <Label alignment="CENTER" prefHeight="47.0" prefWidth="480.0" styleClass="red-background" stylesheets="@style.css" text="Add/Edit Account" textFill="WHITE">
+         <font>
+            <Font name="PT Sans Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

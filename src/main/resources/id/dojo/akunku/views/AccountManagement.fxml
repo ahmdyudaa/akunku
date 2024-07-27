@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="515.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.dojo.akunku.controllers.AccountController">
+   <children>
+      <VBox prefHeight="514.0" prefWidth="700.0">
+         <children>
+            <Label text="Account Overview">
+               <font>
+                  <Font name="PT Sans Bold" size="20.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="85.0" prefWidth="139.0" spacing="3.0" stylesheets="@style.css">
+                     <children>
+                        <Pane prefHeight="82.0" prefWidth="110.0">
+                           <children>
+                              <Label layoutX="10.0" layoutY="17.0" text="15">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="8.0" layoutY="39.0" text="Total Account" />
+                              <FontAwesomeIconView glyphName="USERS" layoutX="112.0" layoutY="18.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-background" />
+                        <String fx:value="curve-background" />
+                     </styleClass>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="85.0" prefWidth="150.0" stylesheets="@style.css">
+                     <children>
+                        <Pane prefHeight="86.0" prefWidth="150.0">
+                           <children>
+                              <Label layoutX="10.0" layoutY="40.0" styleClass="white-text" text="Total Account" />
+                              <Label fx:id="totalAccountLabel" layoutX="10.0" layoutY="19.0" styleClass="white-text" text="15">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="124.0" layoutY="24.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                     <styleClass>
+                        <String fx:value="curve-background" />
+                        <String fx:value="red-background" />
+                     </styleClass>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <AnchorPane prefHeight="29.0" prefWidth="306.0">
+               <children>
+                  <TextField fx:id="searchField" alignment="BASELINE_LEFT" layoutX="483.0" promptText="Search..." style="-fx-background-color: white; -fx-border-color: #ff504f; -fx-border-radius: 5;" />
+                  <Button alignment="CENTER" layoutX="367.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleNewAccount" stylesheets="@style.css" text="Add Account">
+                     <styleClass>
+                        <String fx:value="red-background" />
+                        <String fx:value="white-text" />
+                     </styleClass>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS" text="" />
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="287.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleExportData" stylesheets="@style.css" text="Export">
+                     <styleClass>
+                        <String fx:value="red-background" />
+                        <String fx:value="white-text" />
+                     </styleClass>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="EXPORT" text="" />
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <TableView fx:id="accountTable" prefHeight="270.0" prefWidth="660.0" stylesheets="@style.css">
+               <columns>
+                  <TableColumn fx:id="usernameColumn" prefWidth="139.33223342895508" text="Username" />
+                  <TableColumn fx:id="passwordColumn" prefWidth="165.66773986816406" text="Password" />
+                  <TableColumn fx:id="signUrlColumn" prefWidth="199.24014282226562" text="Sign Url" />
+                  <TableColumn fx:id="actionColumn" prefWidth="115.04925537109375" text="Action" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

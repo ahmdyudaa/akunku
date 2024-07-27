@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.dojo.akunku.controllers.LoginController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="292.0" styleClass="red-background" stylesheets="@style.css">
+         <children>
+            <VBox alignment="CENTER" layoutX="56.0" layoutY="165.0" prefHeight="68.0" prefWidth="181.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER" styleClass="text-form-field">
+                     <children>
+                        <FontAwesomeIconView fill="#ff5454" glyphName="USER" size="20" />
+                        <TextField fx:id="usernameField" promptText="Username" styleClass="transparant" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" styleClass="text-form-field">
+                     <children>
+                        <FontAwesomeIconView fill="#ff5454" glyphName="KEY" size="20" />
+                        <PasswordField fx:id="passwordField" promptText="****" styleClass="transparant" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#handleLogin" prefHeight="26.0" prefWidth="66.0" style="-fx-background-radius: 20;" styleClass="white-background" text="Login" textFill="#ff1f1f" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="97.0" layoutY="98.0" prefHeight="48.0" prefWidth="99.0" text="LOGIN" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="PT Sans Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="292.0" prefHeight="400.0" prefWidth="309.0" styleClass="white-background" stylesheets="@style.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="82.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="115.0" layoutY="243.0" prefHeight="48.0" prefWidth="99.0" text="Akunku." textAlignment="CENTER">
+               <font>
+                  <Font name="PT Sans Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

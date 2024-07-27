@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <Pane prefHeight="845.0" prefWidth="184.0" styleClass="white-background" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="703.0" prefWidth="184.0" spacing="12.0">
+               <children>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" stylesheets="@style.css" text="Display Account">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="20" styleClass="icon" />
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="transparant" />
+                        <String fx:value="sidebar" />
+                     </styleClass>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="40.0" layoutY="197.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" stylesheets="@style.css" text="History Password">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="LIST" size="20" styleClass="icon" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="transparant" />
+                        <String fx:value="sidebar" />
+                     </styleClass></Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="40.0" layoutY="210.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Settings">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="GEAR" size="20" styleClass="icon" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="transparant" />
+                        <String fx:value="sidebar" />
+                     </styleClass></Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="40.0" layoutY="223.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Exit">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SIGN_OUT" size="20" styleClass="icon" text="" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="transparant" />
+                        <String fx:value="sidebar" />
+                     </styleClass></Button>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="185.0">
+               <children>
+                  <ImageView fitHeight="128.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="73.0" prefWidth="183.0" text="Akunku." textAlignment="CENTER">
+                     <font>
+                        <Font name="PT Sans Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
